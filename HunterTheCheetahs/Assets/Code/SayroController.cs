@@ -5,13 +5,13 @@ using UnityEngine;
 public class SayroController : MonoBehaviour {
 
 
-	public Animator anim,bow_anim;
+	public Animator anim;
 	public GameObject cam;
 	public GameObject isGroundedCheker;
 	public Rigidbody rb;
 	public float JumpForce,moveSpeed;
-	public bool collided,aiming,grounded;
-	public GameObject Arrow,hand,temp_arrow;
+	public bool collided,grounded;
+
 	private float GroundDist;
 
 	public Vector3 hit_position;
@@ -30,24 +30,6 @@ public class SayroController : MonoBehaviour {
 
 
 
-	public void GenerateArrow()
-	{		transform.eulerAngles = GetRotationFromCamera();
-		Quaternion arrow_rot = Arrow.transform.localRotation;
-		arrow_rot.eulerAngles = new Vector3 (0, 0, 0);
-			
-
-		temp_arrow = Instantiate (Arrow, hand.transform.position,Quaternion.identity,hand.transform);
-	}
-	public void Shoot()
-	{
-	//	sdfgsdgsdftemp_arrow = Instantiate (Arrow, hand.transform.position, Quaternion.identity, hand.transform);
-	//	Destroy(temp_arrow);
-		temp_arrow.transform.parent = null;
-		temp_arrow.GetComponent<Rigidbody> ().isKinematic = false;
-
-	}
-
-
 
 	// Use this for initialization
 	void Start () {
@@ -59,7 +41,7 @@ public class SayroController : MonoBehaviour {
 	
 	
 
-		if (!aiming) {
+
 			Vector3 NextDir = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, Input.GetAxisRaw ("Vertical"));
 			if (NextDir != Vector3.zero) {
 				Quaternion_Rotate_From = transform.rotation;
@@ -71,7 +53,7 @@ public class SayroController : MonoBehaviour {
 				Quaternion_Rotate_To = Quaternion.Euler (eLol);
 				transform.rotation = Quaternion.Lerp (Quaternion_Rotate_From, Quaternion_Rotate_To, Time.deltaTime * Rotation_Smoothness);
 			}
-		}
+
 
 
 
@@ -109,7 +91,7 @@ public class SayroController : MonoBehaviour {
 	  {
 
 		grounded = GroundCheck ();
-		if (grounded)aiming = Input.GetButton ("Fire2");
+
 		anim.SetBool("isGrounded",grounded);
 
 	
@@ -126,34 +108,12 @@ public class SayroController : MonoBehaviour {
 
 
 
-		if (aiming) {
-			cam.GetComponent<MouseOrbit> ().xSpeed = 50f;
-			cam.GetComponent<MouseOrbit> ().ySpeed = 50f;
-
-			anim.SetFloat ("Run", 0);
-			Camera.main.fieldOfView = 15f;
-			anim.SetBool ("DrowedArrow", Input.GetButton ("Fire1"));
-			bow_anim.SetBool ("DrowedArrow", Input.GetButton ("Fire1"));
-			transform.eulerAngles = GetRotationFromCamera();
-
-
-		} 
-		else 
-		{
-			Camera.main.fieldOfView = 60f;
-			cam.GetComponent<MouseOrbit> ().xSpeed = 250f;
-			cam.GetComponent<MouseOrbit> ().ySpeed = 120f;
-		}
-
 		var h = Input.GetAxis ("Horizontal") * moveSpeed;
 		var v = Input.GetAxis ("Vertical") * moveSpeed;
 
 
-		if (grounded && !aiming)
-		{
-			anim.SetBool ("DrowedArrow", Input.GetButton ("Fire1"));
-			bow_anim.SetBool ("DrowedArrow", Input.GetButton ("Fire1"));
-				if (Input.GetButton ("Jump")) {
+		if (grounded )
+		{				if (Input.GetButton ("Jump")) {
 					rb.AddRelativeForce ((Vector3.up * JumpForce));
 		}}
 	
@@ -167,7 +127,7 @@ public class SayroController : MonoBehaviour {
 		if (Mathf.Abs(Input.GetAxis ("Horizontal")) >= Mathf.Abs(Input.GetAxis ("Vertical"))) {temp = Mathf.Abs(Input.GetAxis ("Horizontal"));}
 		else{temp =Mathf.Abs(Input.GetAxis ("Vertical")) ;}
 
-		if(!aiming)anim.SetFloat ("Run", temp);
+		anim.SetFloat ("Run", temp);
 
 
 	}
