@@ -9,7 +9,7 @@ public class SayroController : MonoBehaviour {
 	public GameObject cam;
 	public GameObject isGroundedCheker;
 	public Rigidbody rb;
-	public float JumpForce,moveSpeed;
+	public float JumpForce,moveSpeed,attackTime;
 	public bool collided,grounded;
 
 	private float GroundDist;
@@ -38,8 +38,18 @@ public class SayroController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	
+
+		attackTime -= Time.deltaTime;
+		if(Input.GetButtonDown ("Fire1") ){attackTime = 0.5f;}
+
+		if (attackTime <= 0)
+		{
+			anim.SetBool ("Attack", false);
+		} else 
+		{
+			anim.SetBool ("Attack", true);
+		}
+
 
 
 			Vector3 NextDir = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, Input.GetAxisRaw ("Vertical"));

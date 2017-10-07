@@ -64,7 +64,6 @@ D:\sinchik97Temp\UnityProjects\HunterTheCheetahs\Temp\bin\Debug\UnityEngine.Holo
 D:\sinchik97Temp\UnityProjects\HunterTheCheetahs\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\sinchik97Temp\UnityProjects\HunterTheCheetahs\obj\Debug\Assembly-CSharp.dll
 D:\sinchik97Temp\UnityProjects\HunterTheCheetahs\obj\Debug\Assembly-CSharp.pdb
-D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\Temp\bin\Debug\Assembly-CSharp.dll
 D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\Temp\bin\Debug\Assembly-CSharp.pdb
 D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\Temp\bin\Debug\nunit.framework.dll
@@ -95,5 +94,6 @@ D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\Temp\bin\Debug\nunit.framework.xml
 D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\Temp\bin\Debug\UnityEngine.Timeline.xml
 D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\Temp\bin\Debug\UnityEngine.Analytics.xml
 D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\Temp\bin\Debug\UnityEngine.HoloLens.xml
+D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\obj\Debug\Assembly-CSharp.dll
 D:\sinchik97Temp\HackOnRepo\HunterTheCheetahs\obj\Debug\Assembly-CSharp.pdb
