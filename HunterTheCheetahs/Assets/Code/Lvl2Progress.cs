@@ -9,7 +9,7 @@ public class Lvl2Progress : MonoBehaviour {
 	void Update () {
 		if(ChickenKills >= NeedKills)
         {
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene(3);
         }
 	}
 }
