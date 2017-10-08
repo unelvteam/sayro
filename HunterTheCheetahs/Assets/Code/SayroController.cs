@@ -35,7 +35,11 @@ public class SayroController : MonoBehaviour {
 	void Start () {
 		GroundDist = GetComponent<Collider> ().bounds.extents.y;
 	}
-	
+
+	public void DamageOn()
+	{
+		
+	}
 	// Update is called once per frame
 	void Update () {
 

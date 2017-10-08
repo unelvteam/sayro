@@ -53,18 +53,11 @@ public class ChickenScript : MonoBehaviour {
         }
     }
 
-	public void FryChiken()
-	{
 
-			Instantiate(hotChick).transform.position = this.transform.position;
-			Destroy(this.gameObject);
-			LevelObj.ChickenKills++;
 
-	}
-
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
-        if(col.transform.tag == "Player")
+		if(col.transform.tag == "vilka")
         {
             Instantiate(hotChick).transform.position = this.transform.position;
             Destroy(this.gameObject);
