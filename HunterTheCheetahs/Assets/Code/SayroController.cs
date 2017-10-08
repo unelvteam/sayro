@@ -82,7 +82,7 @@ public class SayroController : MonoBehaviour {
 	{
 		RaycastHit hit;
 		var temp =	Physics.SphereCast (isGroundedCheker.transform.position,2.5f, -transform.up, out hit,3);
-		try{Debug.Log (hit.collider.name);}
+		try{}
 		catch{}
 		return temp;
 	}
@@ -100,6 +100,7 @@ public class SayroController : MonoBehaviour {
 	void FixedUpdate()
 	  {
 		Vector3 NextDir = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, Input.GetAxisRaw ("Vertical"));
+
 		grounded = GroundCheck ();
 
 		anim.SetBool("isGrounded",grounded);
@@ -130,27 +131,24 @@ public class SayroController : MonoBehaviour {
 
 
 		else 
-		{if (collided) {
-		rb.velocity = new Vector3 (0,rb.velocity.y,0);
-		} else {
+		{
+			if (collided) { rb.velocity = new Vector3 (0,rb.velocity.y,0); } else 
+	
 		
-
-
-
+		{
+			
 				if (NextDir != Vector3.zero) {
 					rb.velocity = transform.TransformDirection (new Vector3 (rb.velocity.x, rb.velocity.y, 25));
-				} else 
-			{rb.velocity = new Vector3 (0,rb.velocity.y,0);
-				
+				} else {rb.velocity = new Vector3 (0,rb.velocity.y,0);
 				}
-		
+			}
 	
+	
+	}
 
 
 
 
-
-		}}
 		anim.SetBool("Jump",Input.GetButton("Jump"));
 
 		var temp = 0.0f;

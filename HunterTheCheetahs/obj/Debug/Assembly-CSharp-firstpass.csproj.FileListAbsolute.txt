@@ -120,6 +120,5 @@ D:\sinchik97Temp\HackOnRepo\sayro\HunterTheCheetahs\Temp\bin\Debug\nunit.framewo
 D:\sinchik97Temp\HackOnRepo\sayro\HunterTheCheetahs\Temp\bin\Debug\UnityEngine.Timeline.xml
 D:\sinchik97Temp\HackOnRepo\sayro\HunterTheCheetahs\Temp\bin\Debug\UnityEngine.Analytics.xml
 D:\sinchik97Temp\HackOnRepo\sayro\HunterTheCheetahs\Temp\bin\Debug\UnityEngine.HoloLens.xml
-D:\sinchik97Temp\HackOnRepo\sayro\HunterTheCheetahs\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 D:\sinchik97Temp\HackOnRepo\sayro\HunterTheCheetahs\obj\Debug\Assembly-CSharp-firstpass.dll
 D:\sinchik97Temp\HackOnRepo\sayro\HunterTheCheetahs\obj\Debug\Assembly-CSharp-firstpass.pdb
